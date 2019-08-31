@@ -1,4 +1,4 @@
-# typed: true
+# typed: false
 
 require 'sorbet-runtime'
 
@@ -6,7 +6,7 @@ module MySorbet
   extend T::Sig
   include Kernel
 
-  sig {params(message: String).returns(String)}
+  # @param [String] message
   def say(message)
     puts message
     message
